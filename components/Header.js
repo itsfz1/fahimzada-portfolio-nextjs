@@ -4,8 +4,7 @@ import { AiOutlineFundProjectionScreen } from 'react-icons/ai'
 import { BsQuestionDiamond } from 'react-icons/bs'
 import { BiMailSend } from 'react-icons/bi'
 import { FiDownloadCloud } from 'react-icons/fi'
-// import Image from 'next/image'
-// import Resume from '../.next/static/image/public/Fahim-Zada-Portfolio-High-Res.png'
+
 export const Header = () =>
 {
     return (
