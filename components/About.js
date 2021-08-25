@@ -19,7 +19,7 @@ export const About = () =>
             <div id="about" className="aboutme">
                 <div className="left-side">
                     <ul>
-                        <li><Image src={itsfz1} width={400} height={300} /></li>
+                        <li><Image src={itsfz1} width={400} height={300} alt="my pic" /></li>
                         <li><h3>Fahim <span className="second-name">Zada</span></h3></li>
                         <li><h3>Software <span className="engineer">Engineer</span></h3></li>
                         <li><h3>Full Stack <span className="developer">Web Developer</span></h3></li>
@@ -42,22 +42,23 @@ export const About = () =>
                     </div>
                     <h3 className="engineer">Socials</h3>
                     <div className="about-icons">
-                        <a href="https://www.facebook.com/faheem.zada.9/" target="_blank">
+                        <a href="https://www.facebook.com/faheem.zada.9/" target="_blank" rel="noreferrer">
                             <FaFacebook className="view" style={{ height: "2rem", width: "2rem", color: "#fff" }} />
                         </a>
-                        <a href="https://www.linkedin.com/in/fahimzada/" target="_blank">
+                        <a href="https://www.linkedin.com/in/fahimzada/" target="_blank" rel="noreferrer">
                             <FaLinkedin className="view" style={{ height: "2rem", width: "2rem", color: "#fff" }} />
                         </a>
-                        <a href="https://www.instagram.com/itsfz1/" target="_blank">
+                        <a href="https://www.instagram.com/itsfz1/" target="_blank" rel="noreferrer">
                             <FaInstagramSquare className="view" style={{ height: "2rem", width: "2rem", color: "#fff" }} />
                         </a>
-                        <a href="https://github.com/itsfz1" target="_blank">
+                        <a href="https://github.com/itsfz1" target="_blank" rel="noreferrer">
                             <FaGithub className="view" style={{ height: "2rem", width: "2rem", color: "#fff" }} />
                         </a>
-                        <a href="https://api.whatsapp.com/send?phone=923349093082&text=Thank%20You%20For%20Contacting%20Will%20Get%20Back%20To%20You%20As%20Soon%20As%20Possible%20:)" target="_blank">
+                        <a href="https://api.whatsapp.com/send?phone=923349093082&text=Thank%20You%20For%20Contacting%20Will%20Get%20Back%20To%20You%20As%20Soon%20As%20Possible%20:)"
+                            target="_blank" rel="noreferrer">
                             <FaWhatsappSquare className="view" style={{ height: "2rem", width: "2rem", color: "#fff" }} />
                         </a>
-                        <a href="mailto:me@fahimzada.com" target="_blank">
+                        <a href="mailto:me@fahimzada.com" target="_blank" rel="noreferrer">
                             <ImMail className="view" style={{ height: "1.9rem", width: "2rem", color: "#fff" }} />
                         </a>
                     </div>

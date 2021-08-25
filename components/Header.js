@@ -19,7 +19,7 @@ export const Header = () =>
             </div>
             <div className="heading-wrapper">
                 <div className="heading-container">
-                    <h1 className="header-heading">Hi, I'm Fahim Zada</h1>
+                    <h1 className="header-heading">Hi, I&#39;m Fahim Zada</h1>
                     <h1 className="header-heading">Ex LAMP Now Working</h1>
                     <h1 className="header-heading">As MERN Stack Developer </h1>
                 </div>
