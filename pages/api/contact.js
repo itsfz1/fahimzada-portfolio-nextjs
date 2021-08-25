@@ -38,12 +38,12 @@ const Mailer = ( req, res ) =>
             console.log( err )
         }
         else {
+            res.send( 'success' )
             console.log( info )
         }
 
     } )
 
-    res.send( 'success' )
 }
 
 export default Mailer
