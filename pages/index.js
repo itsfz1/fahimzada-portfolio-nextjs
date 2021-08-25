@@ -17,11 +17,11 @@ const HOME = () =>
         <meta name="description" content='Web App Lover who use effective and optimize approach to solve real world problems.' />
         <meta name="keywords" content='Fahim Zada, itsfz1, red apple, fahim zada web developer, fahim zada software engineer' />
         <meta property="og:image" content='/images/itsfz1.png' />
-        <meta property="og:description" content='Web App Lover who use effective and optimize approach to solve real world problems. Cant' />
+        <meta property="og:description" content='Web App Lover who use effective and optimize approach to solve real world problems.' />
         <meta property="og:title" content='Fahim Zada (Itfz1) Porfolio! - Welcome' />
         <meta property="twitter:image" content='/images/itsfz1.png' />
         <meta property="twitter:title" content='Fahim Zada (Itfz1) Porfolio! - Welcome' />
-        <meta property="twitter:description" content='Web App Lover who use effective and optimize approach to solve real world problems. Cant' />
+        <meta property="twitter:description" content='Web App Lover who use effective and optimize approach to solve real world problems.' />
       </Head>
       <Header />
       <Education />
