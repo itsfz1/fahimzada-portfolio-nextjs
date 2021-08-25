@@ -1,6 +1,6 @@
 # Made with ❤️ by Fahim Zada (itsfz1). Portfolio site Next js
 
-```fahimzada.com```
+[`fahimzada.com`](https://fahimzada.com/)
 
 This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
 
