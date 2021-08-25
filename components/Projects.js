@@ -56,7 +56,7 @@ export const Projects = () =>
                             <a href="https://github.com/itsfz1/Youtube-Comments-Analyst" target="_blank" rel="noreferrer">
                                 <FaGithub className="github" style={{ height: "2rem", width: "2rem" }} />
                             </a>
-                            <a href="https://fahimzada.com/projects/ytanalyst/" target="_blank">
+                            <a href="https://fahimzada.com/projects/ytanalyst/" target="_blank" rel="noreferrer">
                                 <AiOutlineFundView className="view" style={{ height: "2rem", width: "2rem" }} rel="noreferrer" />
                             </a>
                             <a><BiBookReader style={{ height: "2rem", width: "2rem", color: "#fff" }} rel="noreferrer" />
