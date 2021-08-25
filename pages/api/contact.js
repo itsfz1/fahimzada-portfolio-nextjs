@@ -1,4 +1,4 @@
-const Mailer = ( req, res ) =>
+const Mailer = async ( req, res ) =>
 {
     let nodemailer = require( 'nodemailer' )
     const transporter = nodemailer.createTransport( {
@@ -9,6 +9,21 @@ const Mailer = ( req, res ) =>
             pass: process.env.PASSWORD,
         },
         secure: true,
+    } );
+
+    await new Promise( ( resolve, reject ) =>
+    {
+        // verify connection configuration
+        transporter.verify( ( error, success ) =>
+        {
+            if ( error ) {
+                console.log( error );
+                reject( error );
+            } else {
+                console.log( "Server is ready to take our messages" );
+                resolve( success );
+            }
+        } );
     } );
 
     const output = `
@@ -32,18 +47,22 @@ const Mailer = ( req, res ) =>
         html: output
     }
 
-    transporter.sendMail( mailData, function ( err, info )
+    await new Promise( ( resolve, reject ) =>
     {
-        if ( err ) {
-            console.log( err )
-        }
-        else {
-            res.send( 'success' )
-            console.log( info )
-        }
+        // send mail
+        transporter.sendMail( mailData, ( err, info ) =>
+        {
+            if ( err ) {
+                console.error( err );
+                reject( err );
+            } else {
+                console.log( info );
+                resolve( info );
+            }
+        } );
+    } );
 
-    } )
-
+    res.send( 'success' )
 }
 
 export default Mailer
