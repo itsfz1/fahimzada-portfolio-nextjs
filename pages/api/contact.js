@@ -1,6 +1,7 @@
+const nodemailer = require( 'nodemailer' )
+
 const Mailer = async ( req, res ) =>
 {
-    let nodemailer = require( 'nodemailer' )
     const transporter = nodemailer.createTransport( {
         port: 465,
         host: "smtp.gmail.com",
@@ -32,17 +33,19 @@ const Mailer = async ( req, res ) =>
         html: output
     }
 
-    await transporter.sendMail( mailData, function ( err, info )
+    await new Promise( ( resolve, reject ) =>
     {
-        if ( err ) {
-            console.log( err )
-
-        }
-        else {
-
-            console.log( info )
-        }
-
+        // send mail
+        transporter.sendMail( mailData, ( err, info ) =>
+        {
+            if ( err ) {
+                console.error( err )
+                reject( err )
+            } else {
+                console.log( info )
+                resolve( info )
+            }
+        } )
     } )
 
     res.send( 'success' )
