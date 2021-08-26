@@ -1,8 +1,7 @@
-const Mailer = ( req, res ) =>
+const Mailer = async ( req, res ) =>
 {
     let nodemailer = require( 'nodemailer' )
     const transporter = nodemailer.createTransport( {
-        name: "https://fahimzada.vercel.app/",
         port: 465,
         host: "smtp.gmail.com",
         auth: {
@@ -33,7 +32,7 @@ const Mailer = ( req, res ) =>
         html: output
     }
 
-    transporter.sendMail( mailData, function ( err, info )
+    await transporter.sendMail( mailData, function ( err, info )
     {
         if ( err ) {
             console.log( err )
