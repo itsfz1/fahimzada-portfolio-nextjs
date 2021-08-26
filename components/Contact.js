@@ -23,7 +23,7 @@ export const Contact = () =>
             message
         }
 
-        fetch( '/api/contact', {
+        fetch( 'https://fahimzada.com/api/contact.php', {
             method: 'POST',
             headers: {
                 'Accept': 'application/json, text/plain, */*',
