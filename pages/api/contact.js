@@ -1,15 +1,17 @@
-const nodemailer = require( 'nodemailer' )
-
-const Mailer = async ( req, res ) =>
+const Mailer = ( req, res ) =>
 {
+    let nodemailer = require( 'nodemailer' )
     const transporter = nodemailer.createTransport( {
-        port: 465,
-        host: "smtp.gmail.com",
+        host: "mail.fahimzada.com",
+        port: 587,
+        secure: false,
         auth: {
             user: process.env.MAIL,
             pass: process.env.PASSWORD,
         },
-        secure: true,
+        tls: {
+            rejectUnauthorized: false
+        }
     } );
 
     const output = `
@@ -33,19 +35,17 @@ const Mailer = async ( req, res ) =>
         html: output
     }
 
-    await new Promise( ( resolve, reject ) =>
+    transporter.sendMail( mailData, function ( err, info )
     {
-        // send mail
-        transporter.sendMail( mailData, ( err, info ) =>
-        {
-            if ( err ) {
-                console.error( err )
-                reject( err )
-            } else {
-                console.log( info )
-                resolve( info )
-            }
-        } )
+        if ( err ) {
+            console.log( err )
+
+        }
+        else {
+
+            console.log( info )
+        }
+
     } )
 
     res.send( 'success' )
