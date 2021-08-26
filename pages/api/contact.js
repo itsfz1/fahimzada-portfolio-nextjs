@@ -1,54 +1,58 @@
-const Mailer = ( req, res ) =>
-{
-    let nodemailer = require( 'nodemailer' )
-    const transporter = nodemailer.createTransport( {
-        host: "mail.fahimzada.com",
-        port: 587,
-        secure: false,
-        auth: {
-            user: process.env.MAIL,
-            pass: process.env.PASSWORD,
-        },
-        tls: {
-            rejectUnauthorized: false
-        }
-    } );
+//Disabling Nodemailer as its not works on vercel (SMTP BLOCKED) I created my custom api to handle mails
+//and hosted on my own server + set up auto responders
+//If you are deploying to your custom server or heroku then you can use nodemailer
 
-    const output = `
-    <p>You have a new contact request</p>
-    <h3>Contact Details</h3>
-    <ul>  
-      <li>Name: ${req.body.name}</li>
-      <li>Subject: ${req.body.subject}</li>
-      <li>Email: ${req.body.email}</li>
-      <li>Phone: ${req.body.phone}</li>
-    </ul>
-    <h3>Message</h3>
-    <p>${req.body.message}</p>
-  `;
+// const Mailer = ( req, res ) =>
+// {
+//     let nodemailer = require( 'nodemailer' )
+//     const transporter = nodemailer.createTransport( {
+//         host: "mail.fahimzada.com",
+//         port: 587,
+//         secure: false,
+//         auth: {
+//             user: process.env.MAIL,
+//             pass: process.env.PASSWORD,
+//         },
+//         tls: {
+//             rejectUnauthorized: false
+//         }
+//     } );
 
-    const mailData = {
-        from: '',
-        to: 'me@fahimzada.com',
-        subject: `${req.body.subject}`,
-        text: '',
-        html: output
-    }
+//     const output = `
+//     <p>You have a new contact request</p>
+//     <h3>Contact Details</h3>
+//     <ul>  
+//       <li>Name: ${req.body.name}</li>
+//       <li>Subject: ${req.body.subject}</li>
+//       <li>Email: ${req.body.email}</li>
+//       <li>Phone: ${req.body.phone}</li>
+//     </ul>
+//     <h3>Message</h3>
+//     <p>${req.body.message}</p>
+//   `;
 
-    transporter.sendMail( mailData, function ( err, info )
-    {
-        if ( err ) {
-            console.log( err )
+//     const mailData = {
+//         from: '',
+//         to: 'me@fahimzada.com',
+//         subject: `${req.body.subject}`,
+//         text: '',
+//         html: output
+//     }
 
-        }
-        else {
+//     transporter.sendMail( mailData, function ( err, info )
+//     {
+//         if ( err ) {
+//             console.log( err )
 
-            console.log( info )
-        }
+//         }
+//         else {
 
-    } )
+//             console.log( info )
+//         }
 
-    res.send( 'success' )
-}
+//     } )
 
-export default Mailer
+//     res.send( 'success' )
+// }
+
+// export default Mailer
