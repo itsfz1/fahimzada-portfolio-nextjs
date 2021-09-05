@@ -15,7 +15,7 @@ export const Header = () =>
                 <a href="#projects"><AiOutlineFundProjectionScreen className="projects align-icons" style={{ height: "2rem", width: "2rem", color: "#f1b211" }} />PROJECTS</a>
                 <a href="#about"><BsQuestionDiamond className="about align-icons" style={{ height: "1.7rem", width: "2rem", color: "#2a9a9f" }} />ABOUT</a>
                 <a href="#contact"><BiMailSend className="contact align-icons" style={{ height: "3rem", width: "2rem", color: "#186cb8" }} />CONTACT</a>
-                <a href="/Fahim-Zada-Portfolio-High-Res.png" download="Fahim-Zada-Resume.png"><FiDownloadCloud className="resume align-icons" style={{ height: "2.5rem", width: "2rem", color: "#f9002f" }} />RESUME</a>
+                <a href="/Updated-Fahim-Zada-Portfolio.pdf" download="Updated-Fahim-Zada-Portfolio.pdf"><FiDownloadCloud className="resume align-icons" style={{ height: "2.5rem", width: "2rem", color: "#f9002f" }} />RESUME</a>
             </div>
             <div className="heading-wrapper">
                 <div className="heading-container">
