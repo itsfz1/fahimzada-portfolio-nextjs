@@ -423,11 +423,12 @@ h2 {
 
 .view:hover {
   color: var(--color-4) !important;
+  cursor: pointer;
 }
 
-.github:hover {
+/* .github:hover {
   color: var(--color-5) !important;
-}
+} */
 
 .div-projects {
   margin-top: 80px;
