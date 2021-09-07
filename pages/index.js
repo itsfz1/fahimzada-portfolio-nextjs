@@ -35,10 +35,3 @@ const HOME = () =>
 }
 
 export default HOME
-
-export const getStaticProps = () =>
-{
-  return {
-    props: {}
-  }
-}
